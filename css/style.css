@@ -1,0 +1,96 @@
+/*variables*/
+:root {
+    --primary-color: #007BFF;
+    --primary-color-hover: #0056b3;
+    --success-color: #28a745;
+    --success-color-hover: #218838;
+    --background-color: #f0f0f0;
+    --form-background-color: #fff;
+    --form-border-color: #ccc;
+
+    --fontH1H2: Montserrat, sans-serif;
+    --fontP: Roboto, sans-serif;
+    --fontRich: 'Fira Code', monospace;
+}
+
+/*Authentification*/
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+/*login form*/
+.login-form {
+    background-color: var(--form-background-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+.login-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--form-border-color);
+    border-radius: 3px;
+}
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.login-form button:hover {
+    background-color: var(--primary-color-hover);
+}
+
+/*registration form*/
+.registration-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+.registration-form {
+    background-color: var(--form-background-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+.registration-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.registration-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--form-border-color);
+    border-radius: 3px;
+}
+.registration-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--success-color);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.registration-form button:hover {
+    background-color: var(--success-color-hover);
+}
