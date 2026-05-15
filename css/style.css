@@ -1,0 +1,41 @@
+body {
+    font-family: Roboto Flex ;
+}
+
+nav {
+background-color: #8a2be2;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 20px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f5f5dc;
+    min-width: 150px;
+    padding: 10px;
+    z-index: 100;
+}
+
+.dropdown:hover .dropdown-list {
+    display: block;
+}
+
+.connection-button {
+border-radius: 10px;
+padding: 10px 20px;
+background-color: azure;
+font-weight: bold;
+}
+
+.intro{
+    text-align: center;
+}
