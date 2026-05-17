@@ -1,17 +1,49 @@
 body {
-    font-family: Roboto Flex ;
+    min-height: 100vh;
+    font-family: 'Manrope';
+    margin: 0;
+    color: #333;
 }
 
+h1 {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+h2 {
+    font-size: 16px;    
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+h3 {
+    font-size: 12px;
+}
+
+article p {
+    font-size: 10px;
+    text-align: justify;
+    line-height: 1.5;
+}
 main {
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
     background-color: #e0e0e0;
+    align-items: center;
 }
 
 nav {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-between;
-padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 .mobile-top-nav {
@@ -25,58 +57,57 @@ padding: 10px 20px;
     max-width: 120px;
 }
 
-.logo img {
+.logo img {
     width: 100px;
     height: auto;
 }
 
 .menu {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
     margin-top: 15px;
     width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .menu ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     padding: 0;
     margin: 0;
     width: 100%;
 }
 
-.dropdown {
-    position: relative;
-}
-
-.dropdown-list {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 150px;
-    padding: 10px;
-    z-index: 100;
-}
-
-.dropdown:hover .dropdown-list {
-    display: block;
+.menu a {
+    text-decoration: none;
+    color: #2c4aa5;
+    font-size: 14px;
+    font: bold;
+    padding: 8px 10px;
+    border-radius: 5px;
 }
 
 .connection-button {
-border-radius: 10px;
-padding: 3px 8px;
-background-color: #e0e0e0;
-border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 3px 8px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    font-size: 10px;
 }
 
-.intro{
-    text-align: center;
-    margin: 30px;
+intro {
+    margin: 15px 10px;
+    margin-bottom: 0px;
+}
+
+main section {
+    background-color: #e0e0e0;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0,05);
 }
 
 footer {
