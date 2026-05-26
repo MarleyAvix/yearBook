@@ -33,6 +33,8 @@ Pages a realiser :
 
 ## Modelisation de la base de donnees
 
+### Consigne :
+
 - Conception de l'ERD (Entity Relationship Diagram) : modelisation des relations entre les entites.
 - Création de la base de donnée sur mysql
 
@@ -41,11 +43,16 @@ Structure minimale :
 - Filiere : titre, annee, description.
 - Etudiant : photo, nom, prenom, email (lie a une seule filiere).
 
+### Notre ERD
+<img src="assets/images/MCD.png" alt="Logo" width="300">
+
 ## Gestion de version et collaboration
+### Consignes : 
 
 - Initialisation du repository GitHub : mise en place de l'arborescence du projet.
 - Collaboration : ajout de l'intervenant (jeromeborg) en tant que contributeur.
 - Livrables : code source a jour sur le repo et schema de la base de donnees (ERD) en fin de journee.
+
 
 ## Contraintes techniques
 
