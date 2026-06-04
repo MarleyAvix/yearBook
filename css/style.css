@@ -158,6 +158,8 @@ h1, h2 {
 
 .nav-dropdown {
     position: relative;
+    top: calc(100% + 1px);
+    left: 0px;
 }
 
 .nav-dropdown-toggle::after {
@@ -169,7 +171,7 @@ h1, h2 {
     display: none;
     position: static;
     min-width: 0;
-    margin: 4px 0 0;
+    margin: 1px 0 0;
     padding: 6px 0;
     list-style: none;
     background-color: #ffffff;
@@ -342,6 +344,7 @@ h1, h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 80%;
     max-width: 400px;
+    margin-bottom: 20px;
 }
 
 .auth-form h2 {
