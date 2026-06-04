@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
 			toggleBtn.setAttribute("aria-label", "Ouvrir le menu");
 		};
 
+		const overideToggleBtn = () => {
+			toggleBtn.setAttribute("aria-expanded", "false");
+			toggleBtn.setAttribute("aria-label", "Ouvrir le menu");
+		}
+
 		const openMenu = () => {
 			nav.classList.add("is-open");
 			toggleBtn.setAttribute("aria-expanded", "true");
@@ -54,5 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
 				closeMenu();
 			}
 		});
+
 	});
 });
