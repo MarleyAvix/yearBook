@@ -14,30 +14,34 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="mobile-top-nav">
-                <div>
-                    <a href="index.html">
-                        <img src="assets/logoMDS.png" alt="MDS logo" class="logo"></img>
+        <nav class="site-nav" aria-label="Navigation principale">
+            <div class="navbar-inner">
+                <div class="nav-header">
+                    <a class="brand" href="../index.html">
+                        <span class="brand-icon">◈</span>
+                        <span>MDS YEARBOOK</span>
                     </a>
+                    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">
+                        <span class="nav-toggle-bar"></span>
+                        <span class="nav-toggle-bar"></span>
+                        <span class="nav-toggle-bar"></span>
+                    </button>
                 </div>
 
-                <div>
-                    <button class="connection-button">Se connecter</button>
+                <div class="nav-collapsible">
+                    <ul class="nav-links">
+                        <li><a class="active" href="../index.html">Accueil</a></li>
+                        <li class="nav-dropdown">
+                            <button class="nav-dropdown-toggle" type="button">Filières</button>
+                            <ul class="nav-dropdown-menu">
+                                <li><a href="../pages/sio.html">BTS SIO</a></li>
+                                <li><a href="../pages/ciel.html">BTS CIEL</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a class="nav-login-btn" href="../pages/login.html">Connexion</a>
+                    <a class="nav-login-btn primary" href="../pages/register.html">Inscription</a>
                 </div>
-            </div>
-
-            <div class="menu">
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li class="dropdown">
-                        <a href="#filiere-section">Les filières</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="pages/sio.html">BTS SIO</a></li>
-                            <li><a href="pages/ciel.html">BTS CIEL</a></li>
-                        </ul>
-                    </li>
-                </ul>
             </div>
         </nav>
     </header>
@@ -50,20 +54,15 @@
             <article>
                 <h2>MyDigital School Angers</h2>
                     <h3>Présentation de l'école</h3>
-                        <p>Située dans un écrin de verdure au coeur du Maine et Loire, MyDigital School Angers vous accueille afin de vous former aux métiers du digital et de l'informatique. Notre école vous propose notamment ses formations phares le <a href="https://www.mydigitalschool.com/angers/bts-services-informatiques-organisations-sio?gad_campaignid=21566157052&gad_source=1&gclid=CjwKCAjwzevPBhBaEiwAplAxvkZqrRFzVp9OmpTKRUbK7Cd1KrFQFHvyeFN-PMBwnXseY8BW5lFT3hoCZiQQAvD_BwE" target="_blank">BTS SIO</a> (Services Informatique aux Organisations) en alternance (mais également en formation initiale) et le <a href="https://www.espl.fr/formations/bts-cybersecurite-informatique-et-reseaux-electronique-angers#wrapper-campus" target="_blank">BTS CIEL</a> (Cybersécurité, Informatique et réseaux ELectroniques).</p>
+                        <p>Située dans un écrin de verdure au coeur du Maine et Loire, <a href="https://www.mydigitalschool.com/ecole-multimedia-angers" target="_blank">MyDigital School Angers</a> vous accueille afin de vous former aux métiers du digital et de l'informatique. Notre école vous propose notamment ses formations phares le BTS <abbr title="Services Informatiques aux Organisations">SIO</abbr> en alternance (mais également en formation initiale) et le BTS <abbr title="Cybersécurité, Informatique et réseaux ELectroniques">CIEL</abbr>.</p>
             </article>
         </section>
     </main>
 
     <footer>
-        <div><a></a>
-            <h4>Nous connaître</h4>
+        <div class="footer-content">
+            <p>&copy; 2026 YearBook. Tous droits réservés.</p>
         </div>
-        <div>
-            <h4>Contact</h4>
-        </div>
-        <div>
-            <h4>Mentions légales</h4></div>
     </footer>
     
 </body>

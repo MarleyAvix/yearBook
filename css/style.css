@@ -24,7 +24,7 @@ body {
     margin: 0;
     color: #333;
     background-color: var(--background-color);
-    padding-bottom: 60px;
+    padding-bottom: 180px;
     min-height: 100vh;
     font-family: 'Manrope';
 }
@@ -164,6 +164,9 @@ main h3 {
     background-color: #e0e0e0;
     border: 1px solid #ccc;
     font-size: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: #333333;
 }
 
 .navbar-inner {
@@ -586,4 +589,82 @@ footer {
 
 footer p {
     color: #fff;
+}
+
+.page-wip {
+    font-style: italic;
+    color: #bc8f8f;
+}
+
+/* Grille pour présentation des étudiants de chaque filière */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    background-color: #f0f0f0;
+    max-width: 100%;
+    padding: 15px;
+    margin: 20px auto;
+}
+
+.container div {
+    font-size: 24px;
+    text-align: center;
+}
+
+.container div.header-grid {
+    grid-column: 1 / 4;
+    background-color: #f0f0f0;;
+    text-align: center;
+    padding: 15px;
+    border-radius: 6px 6px 0 0;
+}
+
+.container div.header-grid h2 {
+    color: #1f2a5a;
+    margin: 0;
+    font-size: 20px;
+}
+
+.student-block {
+    background-color: #ffffff;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.student-photo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.student-name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.table-mail {
+    display: inline-block;
+    text-decoration: none;
+    color: #ccc;
+    background-color: #2c4aa5;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.table-mail:hover {
+    background-color: #1f2a5a;
 }
