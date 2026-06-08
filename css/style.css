@@ -31,7 +31,7 @@ body {
     margin: 0;
     color: #333;
     background-color: var(--background-color);
-    padding-bottom: 60px;
+    padding-bottom: 180px;
     min-height: 100vh;
     font-family: 'Manrope';
 }
@@ -184,6 +184,9 @@ main h3 {
     background-color: #e0e0e0;
     border: 1px solid #ccc;
     font-size: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: #333333;
 }
 
 /* =========================================================
@@ -313,6 +316,8 @@ main h3 {
 /* Menu deroulant de la navigation moderne. */
 .nav-dropdown {
     position: relative;
+    top: calc(100% + 1px);
+    left: 0px;
 }
 
 .nav-dropdown-toggle::after {
@@ -324,7 +329,7 @@ main h3 {
     display: none;
     position: static;
     min-width: 0;
-    margin: 4px 0 0;
+    margin: 1px 0 0;
     padding: 6px 0;
     list-style: none;
     background-color: #ffffff;
@@ -538,6 +543,7 @@ main section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 80%;
     max-width: 400px;
+    margin-bottom: 20px;
 }
 
 .auth-form h2 {
@@ -642,309 +648,4 @@ footer p {
 /* =========================================================
    SECTION 09 - HOME PAGE UPGRADES (OVERRIDES)
    Bloc ajoute en fin de fichier pour moderniser la home.
-========================================================= */
-
-/* Override du body: layout colonne et footer non fixe. */
-body {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 0;
-}
-
-/* Permet au main de pousser le footer en bas naturellement. */
-main {
-    flex: 1;
-}
-
-/* Taille de marque reduite dans le contexte home upgrade. */
-.brand {
-    font-size: 18px;
-}
-
-/* Taille logo dans la marque home. */
-.brand .logo {
-    width: 52px;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-}
-
-/* Footer passe en position normale (static) sur la home. */
-footer {
-    position: static;
-    margin-top: auto;
-    padding: 16px 20px;
-}
-
-footer p {
-    margin: 8px 0 0;
-}
-
-/* Fond decoratif de la page d'accueil. */
-.home-main {
-    width: 100%;
-    gap: 18px;
-    padding: 18px;
-    background:
-        radial-gradient(circle at 5% 0%, #f0f4ff 0%, transparent 40%),
-        radial-gradient(circle at 95% 10%, #fff7e7 0%, transparent 32%),
-        linear-gradient(180deg, #eef2fa 0%, #dde3ef 100%);
-}
-
-/* Hero principal de la home. */
-.hero {
-    width: min(1100px, 100%);
-    background: linear-gradient(120deg, #101e4d 0%, #2f5cc7 100%);
-    color: #ffffff;
-    padding: 28px 24px;
-    border-radius: 16px;
-    box-shadow: 0 20px 35px rgba(16, 30, 77, 0.2);
-}
-
-/* Surtitre discret du hero. */
-.hero-kicker {
-    margin: 0;
-    color: #b7ccff;
-    text-transform: uppercase;
-    letter-spacing: 1.6px;
-    font-size: 12px;
-    font-weight: 700;
-}
-
-/* Titre du hero, force en blanc et aligne a gauche. */
-.hero h1 {
-    margin: 10px 0;
-    color: #ffffff;
-    font-size: clamp(28px, 4vw, 44px);
-    text-align: left;
-}
-
-/* Description principale du hero. */
-.hero-description {
-    margin: 0;
-    max-width: 760px;
-    color: #e8eeff;
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-/* Ligne de CTA dans le hero. */
-.hero-actions {
-    margin-top: 18px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-/* Boutons d'action du hero. */
-.hero-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    padding: 10px 16px;
-    border-radius: 10px;
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    font-weight: 600;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.hero-button:hover {
-    transform: translateY(-1px);
-    background-color: rgba(255, 255, 255, 0.12);
-}
-
-.hero-button.primary {
-    background-color: #ffffff;
-    color: #1f2a5a;
-    border: 1px solid #ffffff;
-}
-
-.hero-button.primary:hover {
-    background-color: #dfe8ff;
-}
-
-/* Grille principale de sections sur la home. */
-.home-section {
-    width: min(1100px, 100%);
-    display: grid;
-    gap: 16px;
-    padding: 0;
-    background: transparent;
-    box-shadow: none;
-}
-
-/* Carte de presentation etablissement. */
-.school-card {
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 22px;
-    box-shadow: 0 8px 20px rgba(16, 30, 77, 0.08);
-}
-
-.school-card h2,
-.school-card h3 {
-    margin-top: 0;
-    text-align: left;
-}
-
-/* Grille responsive des filieres. */
-.filiere-grid {
-    display: grid;
-    gap: 12px;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-}
-
-/* Carte cliquable d'une filiere. */
-.filiere-card {
-    background: #ffffff;
-    text-decoration: none;
-    color: #1f2a5a;
-    border-radius: 12px;
-    border: 1px solid #dbe3f7;
-    padding: 20px;
-    box-shadow: 0 8px 18px rgba(20, 44, 100, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.filiere-card h4 {
-    margin-top: 0;
-    margin-bottom: 8px;
-    font-size: 20px;
-}
-
-.filiere-card p {
-    margin: 0;
-    color: #3b4d84;
-}
-
-.filiere-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 16px 26px rgba(20, 44, 100, 0.14);
-}
-
-/* Variante footer dediee a la home. */
-.home-footer {
-    background: #151e42;
-    text-align: center;
-}
-
-/* Colonnes/liste de liens du footer home. */
-.footer-columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-}
-
-.footer-columns a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.footer-columns a:hover {
-    text-decoration: underline;
-}
-
-/* =========================================================
-   SECTION 10 - RESPONSIVE HOME
-   Ajustements de la home sur petits ecrans.
-========================================================= */
-@media (max-width: 860px) {
-    .home-main {
-        padding: 14px;
-    }
-
-    .hero {
-        padding: 22px 18px;
-    }
-
-    .hero-description {
-        font-size: 15px;
-    }
-}
-
-/*=========================================================
-   SECTION 11 - MENTIONS LEGALES
-=========================================================*/
-
-.legal-mentions {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-/*=========================================================
-   SECTION 12 - CONTACT
-=========================================================*/
-.contact-main {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: #f0f0f0;
-}
-
-.contact-section {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    flex: 1;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact-info {
-    width: 100%;
-    max-width: 600px;
-}
-
-.contact-info h1 {
-    margin-top: 0;
-    text-align: center;
-    color: var(--primary-color);
-}
-
-.contact-info ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.contact-info li {
-    margin-bottom: 10px;
-    font-family: var(--fontP);
-    color: #333;
-}
-
-.contact-info li strong {
-    color: var(--primary-color);
-}
-
-/*responsive contact*/
-/*ajustement du conteneur de contact pour les ecrans plus larges, prend toute la largeur de lecran*/
-@media screen and (max-width: 768px) {
-
-    .contact-section {
-        max-width: 100%;
-        margin: 0;
-        border-radius: 0;
-    }
-
- .contact-div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
 }
