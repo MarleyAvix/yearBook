@@ -1,6 +1,7 @@
-/* =========================
-    Variables globales
-========================= */
+/* =========================================================
+   SECTION 01 - VARIABLES GLOBALES
+   Palette, typographies et constantes reutilisables.
+========================================================= */
 :root {
     --primary-color: #1f2a5a;
     --primary-color-hover: #3a57c4;
@@ -15,11 +16,17 @@
     --fontRich: 'Fira Code', monospace;
 }
 
-/* Base: reset léger pour un rendu plus stable */
+/* =========================================================
+   SECTION 02 - BASE ET TYPOGRAPHIE
+   Regles communes appliquees a toute l'application.
+========================================================= */
+
+/* Reset minimal pour stabiliser les dimensions des elements. */
 * {
     box-sizing: border-box;
 }
 
+/* Style principal du document (version globale de base). */
 body {
     margin: 0;
     color: #333;
@@ -29,24 +36,28 @@ body {
     font-family: 'Manrope';
 }
 
+/* Style texte par defaut pour tous les paragraphes. */
 p {
     font-family: var(--fontP);
     color: #333;
     line-height: 1.6;
 }
 
+/* Paragraphes dans les articles: texte plus compact et justifie. */
 main article p {
     font-size: 15px;
     text-align: justify;
     line-height: 1.4;
 }
 
+/* Titres principaux reutilisant la police de marque. */
 h1, h2 {
     font-family: var(--fontH1H2);
     color: var(--primary-color);
     margin-bottom: 20px;
 }
 
+/* Ajustements de titres specifiques au contenu principal. */
 main h1 {
     font-size: 24px;
     text-align: center;
@@ -54,28 +65,28 @@ main h1 {
     margin-bottom: 5px;
     color: #333;
 }
-
+/* Titre de niveau 2 dans le main: plus petit et moins contrasté que les h1. */
 main h2 {
-    font-size: 20px;    
+    font-size: 20px;
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
     color: #333;
 }
-
+/* Titre de niveau 3 dans le main: encore plus petit et discret. */
 main h3 {
     font-size: 16px;
 }
 
-
-/* =========================
-    Navigation
-========================= */
+/* =========================================================
+   SECTION 03 - NAVIGATION
+   Anciennes classes de menu conservees pour compatibilite.
+========================================================= */
 .site-nav {
     background-color: #ffffff;
     border-bottom: 1px solid #e5e7eb;
 }
-
+/* Conteneur interne pour centrer le contenu du menu. */
 .mobile-top-nav {
     display: flex;
     justify-content: space-between;
@@ -83,22 +94,23 @@ main h3 {
     width: 100%;
 }
 
-
+/* Logo du menu legacy. */
 .logo {
     max-width: 120px;
 }
-
+/* Ajustement de la taille du logo dans le menu. */
 .logo img {
     width: 100px;
     height: auto;
 }
 
+/* Liste principale de navigation. */
 .menu {
     list-style-type: none;
     margin-top: 15px;
     width: 100%;
 }
-
+/* Liste des liens de navigation. */
 .menu ul {
     list-style-type: none;
     display: flex;
@@ -119,6 +131,7 @@ main h3 {
     border-radius: 5px;
 }
 
+/* Comportement du sous-menu au survol. */
 .dropdown {
     position: relative;
 }
@@ -158,6 +171,7 @@ main h3 {
     transition: display 0s linear 0.1s;
 }
 
+/* Petit bouton legacy de connexion. */
 .connection-button {
     border-radius: 10px;
     padding: 3px 8px;
@@ -166,6 +180,12 @@ main h3 {
     font-size: 10px;
 }
 
+/* =========================================================
+   SECTION 04 - NAVIGATION MODERNE
+   Structure principale utilisee avec nav-collapsible.
+========================================================= */
+
+/* Conteneur interne qui limite la largeur de la barre. */
 .navbar-inner {
     max-width: 1200px;
     margin: 0 auto;
@@ -176,6 +196,7 @@ main h3 {
     gap: 10px;
 }
 
+/* Ligne haute: marque + bouton burger mobile. */
 .nav-header {
     display: flex;
     align-items: center;
@@ -183,6 +204,7 @@ main h3 {
     gap: 12px;
 }
 
+/* Signature visuelle du site. */
 .brand {
     display: inline-flex;
     align-items: center;
@@ -200,6 +222,7 @@ main h3 {
     font-size: 20px;
 }
 
+/* Bouton d'ouverture/fermeture du menu en mobile. */
 .nav-toggle {
     display: inline-flex;
     flex-direction: column;
@@ -221,6 +244,7 @@ main h3 {
     border-radius: 2px;
 }
 
+/* Zone qui contient les liens et qui se replie en mobile. */
 .nav-collapsible {
     display: none;
     flex-direction: column;
@@ -228,10 +252,12 @@ main h3 {
     width: 100%;
 }
 
+/* Ouverture du menu via la classe is-open (gerer en JS). */
 .site-nav.is-open .nav-collapsible {
     display: flex;
 }
 
+/* Liste des liens de navigation. */
 .nav-links {
     list-style: none;
     display: flex;
@@ -243,6 +269,7 @@ main h3 {
     width: 100%;
 }
 
+/* Style commun liens simples + boutons dropdown. */
 .nav-links>li>a,
 .nav-dropdown-toggle {
     display: block;
@@ -262,12 +289,14 @@ main h3 {
     transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
+/* Retour visuel au survol/focus souris. */
 .nav-links>li>a:hover,
 .nav-dropdown-toggle:hover {
     color: var(--primary-color-hover);
     background-color: #f3f4f6;
 }
 
+/* Lien actif de la navigation. */
 .nav-links a.active {
     color: var(--primary-color-hover);
     border-bottom-color: transparent;
@@ -275,6 +304,7 @@ main h3 {
     border-color: #dbe4ff;
 }
 
+/* Menu deroulant de la navigation moderne. */
 .nav-dropdown {
     position: relative;
 }
@@ -314,11 +344,13 @@ main h3 {
     color: var(--primary-color-hover);
 }
 
+/* Affichage du sous-menu au survol clavier/souris. */
 .nav-dropdown:hover .nav-dropdown-menu,
 .nav-dropdown:focus-within .nav-dropdown-menu {
     display: block;
 }
 
+/* Boutons de connexion dans la barre de navigation. */
 .nav-login-btn {
     display: inline-flex;
     align-items: center;
@@ -353,7 +385,12 @@ main h3 {
     color: #fff;
 }
 
+/* =========================================================
+   SECTION 05 - RESPONSIVE NAVIGATION (DESKTOP)
+   Ajustements au-dessus de 860px.
+========================================================= */
 @media (min-width: 861px) {
+    /* Mise en ligne de la barre complete en desktop. */
     .navbar-inner {
         flex-direction: row;
         align-items: center;
@@ -423,6 +460,10 @@ main h3 {
     }
 }
 
+/* =========================================================
+   SECTION 06 - CONTENU PRINCIPAL GENERIQUE
+   Mise en page standard du main et des sections.
+========================================================= */
 main {
     padding: 10px;
     margin: 0;
@@ -432,23 +473,28 @@ main {
     align-items: center;
 }
 
+/* Bloc d'introduction en tete de page. */
 .intro {
     margin: 15px 10px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
+/* Carte generique appliquee aux sections du main. */
 main section {
     background-color: #ffffff;
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0,05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* =========================
-   Authentification
-========================= */
+/* =========================================================
+   SECTION 07 - AUTHENTIFICATION
+   Conteneurs et styles des formulaires login/register.
+========================================================= */
+
+/* Zone centrale verticale pour afficher les formulaires. */
 .section-form {
     display: flex;
     align-items: center;
@@ -457,6 +503,7 @@ main section {
     padding: 16px;
 }
 
+/* Encapsule le formulaire pour limiter sa largeur. */
 .auth-container {
     display: flex;
     flex-direction: column;
@@ -468,7 +515,7 @@ main section {
     max-width: 500px;
 }
 
-/* Responsive */
+/* Ajustement mobile du conteneur d'authentification. */
 @media screen and (max-width: 860px) {
     .auth-container {
         width: 100%;
@@ -476,7 +523,7 @@ main section {
     }
 }
 
-/* Formulaire de connexion */
+/* Formulaire de connexion. */
 .auth-form {
     background-color: var(--form-background-color);
     padding: 20px;
@@ -492,10 +539,10 @@ main section {
     text-transform: uppercase;
 }
 
+/* Groupe vertical des champs de formulaire. */
 .input-form {
     display: flex;
     flex-direction: column;
-   /* padding: 3px;*/
     gap: 10px;
     margin-bottom: 10px;
 }
@@ -522,9 +569,9 @@ main section {
     background-color: var(--primary-color-hover);
 }
 
+/* Bouton de connexion reutilisable hors formulaire full-width. */
 .login-btn {
     width: auto;
-    /* margin: 3px;*/
     padding: 10px;
     background-color: var(--primary-color);
     color: #fff;
@@ -537,8 +584,7 @@ main section {
     background-color: var(--primary-color-hover);
 }
 
-/* Formulaire d'inscription */
-
+/* Formulaire d'inscription. */
 .registration-form h2 {
     margin-bottom: 20px;
     text-align: center;
@@ -567,9 +613,10 @@ main section {
     background-color: var(--success-color-hover);
 }
 
-/* =========================
-   Footer
-========================= */
+/* =========================================================
+   SECTION 08 - FOOTER GLOBAL (VERSION INITIALE)
+   Footer fixe en bas de page (avant override home).
+========================================================= */
 footer {
     background-color: var(--primary-color);
     color: #fff;
@@ -585,23 +632,29 @@ footer p {
     color: #fff;
 }
 
-/* =========================
-   Home page upgrades
-========================= */
+/* =========================================================
+   SECTION 09 - HOME PAGE UPGRADES (OVERRIDES)
+   Bloc ajoute en fin de fichier pour moderniser la home.
+========================================================= */
+
+/* Override du body: layout colonne et footer non fixe. */
 body {
     display: flex;
     flex-direction: column;
     padding-bottom: 0;
 }
 
+/* Permet au main de pousser le footer en bas naturellement. */
 main {
     flex: 1;
 }
 
+/* Taille de marque reduite dans le contexte home upgrade. */
 .brand {
     font-size: 18px;
 }
 
+/* Taille logo dans la marque home. */
 .brand .logo {
     width: 52px;
     height: auto;
@@ -609,6 +662,7 @@ main {
     border-radius: 8px;
 }
 
+/* Footer passe en position normale (static) sur la home. */
 footer {
     position: static;
     margin-top: auto;
@@ -619,6 +673,7 @@ footer p {
     margin: 8px 0 0;
 }
 
+/* Fond decoratif de la page d'accueil. */
 .home-main {
     width: 100%;
     gap: 18px;
@@ -629,6 +684,7 @@ footer p {
         linear-gradient(180deg, #eef2fa 0%, #dde3ef 100%);
 }
 
+/* Hero principal de la home. */
 .hero {
     width: min(1100px, 100%);
     background: linear-gradient(120deg, #101e4d 0%, #2f5cc7 100%);
@@ -638,6 +694,7 @@ footer p {
     box-shadow: 0 20px 35px rgba(16, 30, 77, 0.2);
 }
 
+/* Surtitre discret du hero. */
 .hero-kicker {
     margin: 0;
     color: #b7ccff;
@@ -647,6 +704,7 @@ footer p {
     font-weight: 700;
 }
 
+/* Titre du hero, force en blanc et aligne a gauche. */
 .hero h1 {
     margin: 10px 0;
     color: #ffffff;
@@ -654,6 +712,7 @@ footer p {
     text-align: left;
 }
 
+/* Description principale du hero. */
 .hero-description {
     margin: 0;
     max-width: 760px;
@@ -662,6 +721,7 @@ footer p {
     line-height: 1.6;
 }
 
+/* Ligne de CTA dans le hero. */
 .hero-actions {
     margin-top: 18px;
     display: flex;
@@ -669,6 +729,7 @@ footer p {
     gap: 10px;
 }
 
+/* Boutons d'action du hero. */
 .hero-button {
     display: inline-flex;
     align-items: center;
@@ -697,6 +758,7 @@ footer p {
     background-color: #dfe8ff;
 }
 
+/* Grille principale de sections sur la home. */
 .home-section {
     width: min(1100px, 100%);
     display: grid;
@@ -706,6 +768,7 @@ footer p {
     box-shadow: none;
 }
 
+/* Carte de presentation etablissement. */
 .school-card {
     background: #ffffff;
     border-radius: 14px;
@@ -719,12 +782,14 @@ footer p {
     text-align: left;
 }
 
+/* Grille responsive des filieres. */
 .filiere-grid {
     display: grid;
     gap: 12px;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
 
+/* Carte cliquable d'une filiere. */
 .filiere-card {
     background: #ffffff;
     text-decoration: none;
@@ -752,11 +817,13 @@ footer p {
     box-shadow: 0 16px 26px rgba(20, 44, 100, 0.14);
 }
 
+/* Variante footer dediee a la home. */
 .home-footer {
     background: #151e42;
     text-align: center;
 }
 
+/* Colonnes/liste de liens du footer home. */
 .footer-columns {
     display: flex;
     flex-wrap: wrap;
@@ -774,6 +841,10 @@ footer p {
     text-decoration: underline;
 }
 
+/* =========================================================
+   SECTION 10 - RESPONSIVE HOME
+   Ajustements de la home sur petits ecrans.
+========================================================= */
 @media (max-width: 860px) {
     .home-main {
         padding: 14px;
