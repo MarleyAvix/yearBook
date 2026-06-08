@@ -600,11 +600,10 @@ footer p {
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    gap: 8px;
     background-color: #f0f0f0;
     max-width: 100%;
-    padding: 15px;
-    margin: 20px auto;
+    padding: 10px;
 }
 
 .container div {
@@ -628,30 +627,34 @@ footer p {
 
 .student-block {
     background-color: #ffffff;
-    border: 1px solid #333;
+    border: 1px solid #bababa;
     border-radius: 6px;
-    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
-    gap: 10px;
+    gap: 20px;
+    padding: 5px;
 }
 
 .student-photo img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    width: 100%;
+    max-width: 100%;
     border: 2px solid #ccc;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+}
+
+/*regroupement des noms et @ pour les centrer sous la photo*/
+.content-card {
+    display: inline;
+    align-items: center;
+    text-align: center;
 }
 
 .student-name {
     font-size: 15px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 8px;
 }
 
 .table-mail {
@@ -659,7 +662,7 @@ footer p {
     text-decoration: none;
     color: #ccc;
     background-color: #2c4aa5;
-    padding: 5px 12px;
+    padding: 5px 10px;
     border-radius: 12px;
     font-size: 11px;
     font-weight: 500;
