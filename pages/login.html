@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Fira+Code:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Connexion</title>
+</head>
+
+<body>
+    <nav class="site-nav" aria-label="Navigation principale">
+        <div class="navbar-inner">
+            <div class="nav-header">
+                <a class="brand" href="../index.html">
+                    <span class="brand-icon">◈</span>
+                    <span>MDS YEARBOOK</span>
+                </a>
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+            </div>
+
+            <div class="nav-collapsible">
+                <ul class="nav-links">
+                    <li><a class="active" href="../index.html">Accueil</a></li>
+                    <li class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" type="button">Filieres</button>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="filiere.html?bts=sio">BTS SIO</a></li>
+                            <li><a href="filiere.html?bts=ciel">BTS CIEL</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="nav-login-btn" href="login.html">Connexion</a>
+                <a class="nav-login-btn primary" href="register.html">Inscription</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section-form">
+        <div class="auth-container">
+            <form class="auth-form" action="/login" method="post">
+                <h2>Connexion</h2>
+                <div class="input-form">
+                    <label for="username">Nom d'utilisateur:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="input-form">
+                    <label for="password">Mot de passe:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <button class="login-btn" type="submit">Se connecter</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 YearBook. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
