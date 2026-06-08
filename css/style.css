@@ -1,7 +1,5 @@
-/* =========================================================
-   SECTION 01 - VARIABLES GLOBALES
-   Palette, typographies et constantes reutilisables.
-========================================================= */
+/* -- Variables -- */
+
 :root {
     --primary-color: #1f2a5a;
     --primary-color-hover: #3a57c4;
@@ -13,44 +11,40 @@
 
     --fontH1H2: Montserrat, sans-serif;
     --fontP: Roboto, sans-serif;
-    --fontRich: 'Fira Code', monospace;
 }
 
-/* =========================================================
-   SECTION 02 - BASE ET TYPOGRAPHIE
-   Regles communes appliquees a toute l'application.
-========================================================= */
 
-/* Reset minimal pour stabiliser les dimensions des elements. */
+/* -- Base -- */
+
 * {
     box-sizing: border-box;
 }
 
-/* Style principal du document (version globale de base). */
+button {
+    font: inherit;
+}
+
 body {
     margin: 0;
     color: #333;
     background-color: var(--background-color);
-    padding-bottom: 180px;
+    padding-bottom: 180px; /* compense le footer fixe */
     min-height: 100vh;
     font-family: 'Manrope';
 }
 
-/* Style texte par defaut pour tous les paragraphes. */
 p {
     font-family: var(--fontP);
     color: #333;
     line-height: 1.6;
 }
 
-/* Paragraphes dans les articles: texte plus compact et justifie. */
 main article p {
     font-size: 15px;
     text-align: justify;
     line-height: 1.4;
 }
 
-/* Titres principaux reutilisant la police de marque. */
 h1,
 h2 {
     font-family: var(--fontH1H2);
@@ -58,7 +52,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Ajustements de titres specifiques au contenu principal. */
 main h1 {
     font-size: 24px;
     text-align: center;
@@ -67,7 +60,6 @@ main h1 {
     color: #333;
 }
 
-/* Titre de niveau 2 dans le main: plus petit et moins contrasté que les h1. */
 main h2 {
     font-size: 20px;
     text-align: center;
@@ -76,21 +68,18 @@ main h2 {
     color: #333;
 }
 
-/* Titre de niveau 3 dans le main: encore plus petit et discret. */
 main h3 {
     font-size: 16px;
 }
 
-/* =========================================================
-   SECTION 03 - NAVIGATION
-   Anciennes classes de menu conservees pour compatibilite.
-========================================================= */
+
+/* -- Nav legacy -- */
+
 .site-nav {
     background-color: #ffffff;
     border-bottom: 1px solid #e5e7eb;
 }
 
-/* Conteneur interne pour centrer le contenu du menu. */
 .mobile-top-nav {
     display: flex;
     justify-content: space-between;
@@ -98,25 +87,21 @@ main h3 {
     width: 100%;
 }
 
-/* Logo du menu legacy. */
 .logo {
     max-width: 120px;
 }
 
-/* Ajustement de la taille du logo dans le menu. */
 .logo img {
     width: 100px;
     height: auto;
 }
 
-/* Liste principale de navigation. */
 .menu {
     list-style-type: none;
     margin-top: 15px;
     width: 100%;
 }
 
-/* Liste des liens de navigation. */
 .menu ul {
     list-style-type: none;
     display: flex;
@@ -132,12 +117,11 @@ main h3 {
     text-decoration: none;
     color: #2c4aa5;
     font-size: 14px;
-    font: bold;
+    font-weight: bold;
     padding: 8px 10px;
     border-radius: 5px;
 }
 
-/* Comportement du sous-menu au survol. */
 .dropdown {
     position: relative;
 }
@@ -177,7 +161,6 @@ main h3 {
     transition: display 0s linear 0.1s;
 }
 
-/* Petit bouton legacy de connexion. */
 .connection-button {
     border-radius: 10px;
     padding: 3px 8px;
@@ -189,12 +172,9 @@ main h3 {
     color: #333333;
 }
 
-/* =========================================================
-   SECTION 04 - NAVIGATION MODERNE
-   Structure principale utilisee avec nav-collapsible.
-========================================================= */
 
-/* Conteneur interne qui limite la largeur de la barre. */
+/* -- Nav -- */
+
 .navbar-inner {
     max-width: 1200px;
     margin: 0 auto;
@@ -205,7 +185,6 @@ main h3 {
     gap: 10px;
 }
 
-/* Ligne haute: marque + bouton burger mobile. */
 .nav-header {
     display: flex;
     align-items: center;
@@ -213,7 +192,6 @@ main h3 {
     gap: 12px;
 }
 
-/* Signature visuelle du site. */
 .brand {
     display: inline-flex;
     align-items: center;
@@ -231,7 +209,6 @@ main h3 {
     font-size: 20px;
 }
 
-/* Bouton d'ouverture/fermeture du menu en mobile. */
 .nav-toggle {
     display: inline-flex;
     flex-direction: column;
@@ -253,7 +230,6 @@ main h3 {
     border-radius: 2px;
 }
 
-/* Zone qui contient les liens et qui se replie en mobile. */
 .nav-collapsible {
     display: none;
     flex-direction: column;
@@ -261,12 +237,11 @@ main h3 {
     width: 100%;
 }
 
-/* Ouverture du menu via la classe is-open (gerer en JS). */
+/* is-open est gere par script.js */
 .site-nav.is-open .nav-collapsible {
     display: flex;
 }
 
-/* Liste des liens de navigation. */
 .nav-links {
     list-style: none;
     display: flex;
@@ -278,8 +253,7 @@ main h3 {
     width: 100%;
 }
 
-/* Style commun liens simples + boutons dropdown. */
-.nav-links>li>a,
+.nav-links > li > a,
 .nav-dropdown-toggle {
     display: block;
     width: 100%;
@@ -298,14 +272,12 @@ main h3 {
     transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
-/* Retour visuel au survol/focus souris. */
-.nav-links>li>a:hover,
+.nav-links > li > a:hover,
 .nav-dropdown-toggle:hover {
     color: var(--primary-color-hover);
     background-color: #f3f4f6;
 }
 
-/* Lien actif de la navigation. */
 .nav-links a.active {
     color: var(--primary-color-hover);
     border-bottom-color: transparent;
@@ -313,11 +285,8 @@ main h3 {
     border-color: #dbe4ff;
 }
 
-/* Menu deroulant de la navigation moderne. */
 .nav-dropdown {
     position: relative;
-    top: calc(100% + 1px);
-    left: 0px;
 }
 
 .nav-dropdown-toggle::after {
@@ -329,7 +298,7 @@ main h3 {
     display: none;
     position: static;
     min-width: 0;
-    margin: 1px 0 0;
+    margin: 0px 0 0;
     padding: 6px 0;
     list-style: none;
     background-color: #ffffff;
@@ -337,6 +306,7 @@ main h3 {
     border-radius: 6px;
     box-shadow: none;
     z-index: 20;
+  
 }
 
 .nav-dropdown-menu a {
@@ -355,13 +325,11 @@ main h3 {
     color: var(--primary-color-hover);
 }
 
-/* Affichage du sous-menu au survol clavier/souris. */
 .nav-dropdown:hover .nav-dropdown-menu,
 .nav-dropdown:focus-within .nav-dropdown-menu {
     display: block;
 }
 
-/* Boutons de connexion dans la barre de navigation. */
 .nav-login-btn {
     display: inline-flex;
     align-items: center;
@@ -396,13 +364,11 @@ main h3 {
     color: #fff;
 }
 
-/* =========================================================
-   SECTION 05 - RESPONSIVE NAVIGATION (DESKTOP)
-   Ajustements au-dessus de 860px.
-========================================================= */
+
+/* -- Nav desktop -- */
+
 @media (min-width: 861px) {
 
-    /* Mise en ligne de la barre complete en desktop. */
     .navbar-inner {
         flex-direction: row;
         align-items: center;
@@ -440,7 +406,7 @@ main h3 {
         width: auto;
     }
 
-    .nav-links>li>a,
+    .nav-links > li > a,
     .nav-dropdown-toggle {
         display: inline-block;
         width: auto;
@@ -462,7 +428,7 @@ main h3 {
 
     .nav-dropdown-menu {
         position: absolute;
-        top: calc(100% + 8px);
+        top: 100%;
         left: 0;
         min-width: 170px;
         margin: 0;
@@ -472,10 +438,9 @@ main h3 {
     }
 }
 
-/* =========================================================
-   SECTION 06 - CONTENU PRINCIPAL GENERIQUE
-   Mise en page standard du main et des sections.
-========================================================= */
+
+/* -- Main -- */
+
 main {
     padding: 10px;
     margin: 0;
@@ -485,13 +450,11 @@ main {
     align-items: center;
 }
 
-/* Bloc d'introduction en tete de page. */
 .intro {
     margin: 15px 10px;
     margin-bottom: 0;
 }
 
-/* Carte generique appliquee aux sections du main. */
 main section {
     background-color: #ffffff;
     padding: 20px;
@@ -501,12 +464,9 @@ main section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* =========================================================
-   SECTION 07 - AUTHENTIFICATION
-   Conteneurs et styles des formulaires login/register.
-========================================================= */
 
-/* Zone centrale verticale pour afficher les formulaires. */
+/* -- Formulaires -- */
+
 .section-form {
     display: flex;
     align-items: center;
@@ -515,7 +475,6 @@ main section {
     padding: 16px;
 }
 
-/* Encapsule le formulaire pour limiter sa largeur. */
 .auth-container {
     display: flex;
     flex-direction: column;
@@ -527,7 +486,6 @@ main section {
     max-width: 500px;
 }
 
-/* Ajustement mobile du conteneur d'authentification. */
 @media screen and (max-width: 860px) {
     .auth-container {
         width: 100%;
@@ -535,7 +493,6 @@ main section {
     }
 }
 
-/* Formulaire de connexion. */
 .auth-form {
     background-color: var(--form-background-color);
     padding: 20px;
@@ -552,7 +509,6 @@ main section {
     text-transform: uppercase;
 }
 
-/* Groupe vertical des champs de formulaire. */
 .input-form {
     display: flex;
     flex-direction: column;
@@ -582,7 +538,6 @@ main section {
     background-color: var(--primary-color-hover);
 }
 
-/* Bouton de connexion reutilisable hors formulaire full-width. */
 .login-btn {
     width: auto;
     padding: 10px;
@@ -597,7 +552,6 @@ main section {
     background-color: var(--primary-color-hover);
 }
 
-/* Formulaire d'inscription. */
 .registration-form h2 {
     margin-bottom: 20px;
     text-align: center;
@@ -626,10 +580,9 @@ main section {
     background-color: var(--success-color-hover);
 }
 
-/* =========================================================
-   SECTION 08 - FOOTER GLOBAL (VERSION INITIALE)
-   Footer fixe en bas de page (avant override home).
-========================================================= */
+
+/* -- Footer -- */
+
 footer {
     background-color: var(--primary-color);
     color: #fff;
@@ -645,7 +598,342 @@ footer p {
     color: #fff;
 }
 
-/* =========================================================
-   SECTION 09 - HOME PAGE UPGRADES (OVERRIDES)
-   Bloc ajoute en fin de fichier pour moderniser la home.
+
+/* -- Sticky footer -- */
+
+body:has(.home-footer) {
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body:has(.home-footer) main {
+    flex: 1;
+}
+
+
+/* -- Accueil -- */
+
+body.page-home {
+    padding-bottom: 0;
+}
+
+.home-main {
+    background-color: #eef0f8;
+    padding: 32px 16px;
+    gap: 24px;
+}
+
+.home-main .hero {
+    background: linear-gradient(135deg, var(--primary-color-hover) 0%, var(--primary-color) 100%);
+    border-radius: 16px;
+    padding: 56px 48px;
+    max-width: 1100px;
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(31, 42, 90, 0.18);
+}
+
+.hero-kicker {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary-color-hover);
+    margin: 0 0 12px;
+    font-family: var(--fontP);
+}
+
+.home-main .hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 16px;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.hero-description {
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.88);
+    margin: 0 0 32px;
+    max-width: 720px;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+    font-family: var(--fontP);
+}
+
+.hero-button.primary {
+    background-color: #ffffff;
+    color: var(--primary-color);
+}
+
+.hero-button.primary:hover {
+    background-color: #e8ecff;
+}
+
+.home-main .home-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1100px;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.school-card {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 32px 36px;
+    box-shadow: 0 2px 12px rgba(31, 42, 90, 0.07);
+}
+
+.home-main .school-card h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 4px;
+    text-align: left;
+}
+
+.home-main .school-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 16px;
+    text-align: left;
+}
+
+.home-main .school-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.65;
+    text-align: justify;
+    margin: 0;
+}
+
+/*Filiere grid*/
+.filiere-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.filiere-card {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 2px 12px rgba(31, 42, 90, 0.07);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.filiere-card:hover {
+    box-shadow: 0 6px 24px rgba(31, 42, 90, 0.13);
+    transform: translateY(-2px);
+}
+
+.filiere-card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 8px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.filiere-card p {
+    font-size: 14px;
+    color: var(--primary-color-hover);
+    margin: 0;
+    text-align: left;
+}
+
+/* Footer Accueil */
+
+.home-footer {
+    position: static;
+    background-color: #0b1735;
+    width: 100%;
+    padding: 44px 24px 28px;
+    text-align: center;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.footer-columns a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+}
+
+.footer-columns a:hover {
+    color: #ffffff;
+}
+
+.home-footer p {
+    color: rgba(255, 255, 255, 0.35);
+    margin: 0;
+    font-size: 13px;
+    letter-spacing: 0.01em;
+}
+
+/* -- Contact -- */
+
+.contact-main {
+    background-color: #eef0f8;
+    padding: 40px 16px;
+    gap: 0;
+}
+
+.contact-main .contact-section {
+    max-width: 700px;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.contact-info {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 40px 44px;
+    box-shadow: 0 2px 12px rgba(31, 42, 90, 0.07);
+}
+
+.contact-main .contact-info h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 20px;
+    text-align: left;
+}
+
+.contact-div p {
+    color: #555;
+    font-size: 15px;
+    margin: 0 0 16px;
+}
+
+.contact-div ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-div li {
+    color: #444;
+    font-size: 15px;
+    font-family: var(--fontP);
+    line-height: 1.5;
+}
+
+.contact-div a {
+    color: var(--primary-color-hover);
+    text-decoration: none;
+}
+
+.contact-div a:hover {
+    text-decoration: underline;
+}
+
+
+/* -- Mentions légales -- */
+
+.legal-main {
+    background-color: #eef0f8;
+    padding: 40px 16px;
+    gap: 0;
+}
+
+.legal-main section {
+    max-width: 800px;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.legal-mentions {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 32px 36px;
+    box-shadow: 0 2px 12px rgba(31, 42, 90, 0.07);
+}
+
+.legal-mentions h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 16px;
+    text-align: left;
+}
+
+.legal-mentions h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 10px;
+    text-align: left;
+}
+
+.legal-mentions p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.65;
+    margin: 0;
+}
+
+
+/* -- Responsive -- */
+@media (max-width: 860px) {
+    .home-main .hero {
+        padding: 36px 24px;
+    }
+
+    .home-main .hero h1 {
+        font-size: 32px;
+    }
+
+    .filiere-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .school-card,
+    .contact-info,
+    .legal-mentions {
+        padding: 24px 20px;
+    }
 }
