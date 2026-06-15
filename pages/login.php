@@ -1,3 +1,4 @@
+<?php ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -8,16 +9,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <title>Inscription</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <title>Connexion</title>
 </head>
 
 <body>
-       <header>
+    <header>
         <nav class="site-nav" aria-label="Navigation principale">
             <div class="navbar-inner">
                 <div class="nav-header">
-                    <a class="brand" href="../index.php" aria-label="Accueil Yearbook">
+                    <a class="brand" href="../index.html" aria-label="Accueil Yearbook">
                         <img src="../assets/logoMDS.png" alt="Logo MyDigitalSchool" class="logo">
                         <span>MDS YEARBOOK</span>
                     </a>
@@ -30,17 +33,17 @@
 
                 <div class="nav-collapsible">
                     <ul class="nav-links">
-                        <li><a href="../index.php">Accueil</a></li>
+                        <li><a href="../index.html">Accueil</a></li>
                         <li class="nav-dropdown">
                             <button class="nav-dropdown-toggle" type="button">Les filieres</button>
                             <ul class="nav-dropdown-menu">
-                                <li><a href="sio.php">BTS SIO</a></li>
-                                <li><a href="ciel.php">BTS CIEL</a></li>
+                                <li><a href="sio.html">BTS SIO</a></li>
+                                <li><a href="ciel.html">BTS CIEL</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <a class="nav-login-btn" href="login.php">Connexion</a>
-                    <a class="nav-login-btn primary active" href="register.php">Inscription</a>
+                    <a class="nav-login-btn active" href="login.html">Connexion</a>
+                    <a class="nav-login-btn primary" href="register.html">Inscription</a>
                 </div>
             </div>
         </nav>
@@ -48,8 +51,8 @@
 
     <section class="section-form">
         <div class="auth-container">
-            <form class="auth-form" action="/register" method="post">
-                <h2>Inscription</h2>
+            <form class="auth-form" action="/login" method="post">
+                <h2>Connexion</h2>
                 <div class="input-form">
                     <label for="username">Nom d'utilisateur:</label>
                     <input type="text" id="username" name="username" required>
@@ -60,14 +63,15 @@
                     <input type="password" id="password" name="password" required>
                 </div>
 
-                <button class="register-btn" type="submit">S'inscrire</button>
+                <button class="login-btn" type="submit">Se connecter</button>
             </form>
         </div>
     </section>
-   <footer class="home-footer">
+
+    <footer class="home-footer">
         <div class="footer-columns">
-            <a href="contact.php">Contact</a>
-            <a href="mentions-legales.php">Mentions legales</a>
+            <a href="contact.html">Contact</a>
+            <a href="mentions-legales.html">Mentions légales</a>
         </div>
         <p>&copy; 2026 MDS Yearbook</p>
     </footer>

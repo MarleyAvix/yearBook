@@ -1,23 +1,26 @@
+<?php ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <title>Inscription</title>
+    <title>Contact</title>
 </head>
 
 <body>
-       <header>
+    <header>
         <nav class="site-nav" aria-label="Navigation principale">
             <div class="navbar-inner">
                 <div class="nav-header">
-                    <a class="brand" href="../index.php" aria-label="Accueil Yearbook">
+                    <a class="brand" href="index.html" aria-label="Accueil Yearbook">
                         <img src="../assets/logoMDS.png" alt="Logo MyDigitalSchool" class="logo">
                         <span>MDS YEARBOOK</span>
                     </a>
@@ -30,48 +33,46 @@
 
                 <div class="nav-collapsible">
                     <ul class="nav-links">
-                        <li><a href="../index.php">Accueil</a></li>
+                        <li><a class="active" href="index.html">Accueil</a></li>
                         <li class="nav-dropdown">
                             <button class="nav-dropdown-toggle" type="button">Les filieres</button>
                             <ul class="nav-dropdown-menu">
-                                <li><a href="sio.php">BTS SIO</a></li>
-                                <li><a href="ciel.php">BTS CIEL</a></li>
+                                <li><a href="pages/sio.html">BTS SIO</a></li>
+                                <li><a href="pages/ciel.html">BTS CIEL</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <a class="nav-login-btn" href="login.php">Connexion</a>
-                    <a class="nav-login-btn primary active" href="register.php">Inscription</a>
+                    <a class="nav-login-btn" href="pages/login.html">Connexion</a>
+                    <a class="nav-login-btn primary" href="pages/register.html">Inscription</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <section class="section-form">
-        <div class="auth-container">
-            <form class="auth-form" action="/register" method="post">
-                <h2>Inscription</h2>
-                <div class="input-form">
-                    <label for="username">Nom d'utilisateur:</label>
-                    <input type="text" id="username" name="username" required>
+    <main class="contact-main">
+        <section class="contact-section">
+            <article class="contact-info">
+                <h1>Contactez-nous</h1>
+                <div class="contact-div">
+                    <p>Pour toute question ou demande d'information, n'hésitez pas à nous contacter :</p>
+                    <ul>
+                        <li>Email : <a href="mailto:contact@mydigitalschool.fr">contact@mydigitalschool.fr</a></li>
+                        <li>Téléphone : +33 1 23 45 67 89</li>
+                        <li>Adresse : 123 Rue de l'Innovation, 49000 Angers, France</li>
+                    </ul>
                 </div>
+            </article>
+        </section>
+    </main>
 
-                <div class="input-form">
-                    <label for="password">Mot de passe:</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-
-                <button class="register-btn" type="submit">S'inscrire</button>
-            </form>
-        </div>
-    </section>
-   <footer class="home-footer">
+    <footer class="home-footer">
         <div class="footer-columns">
-            <a href="contact.php">Contact</a>
-            <a href="mentions-legales.php">Mentions legales</a>
+            <a href="contact.html">Contact</a>
+            <a href="mentions-legales.html">Mentions légales</a>
         </div>
         <p>&copy; 2026 MDS Yearbook</p>
     </footer>
-    <script src="../js/script.js"></script>
-</body>
 
+    <script src="../js/script.js"></script>
+ </body>
 </html>
