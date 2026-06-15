@@ -16,49 +16,40 @@
   </head>
   <body>
     <header>
-      <nav class="site-nav" aria-label="Navigation principale">
-        <div class="navbar-inner">
-          <div class="nav-header">
-            <a class="brand" href="../index.html">
-              <span class="brand-icon">◈</span>
-              <span>MDS YEARBOOK</span>
-            </a>
-            <button
-              class="nav-toggle"
-              type="button"
-              aria-expanded="false"
-              aria-label="Ouvrir le menu"
-            >
-              <span class="nav-toggle-bar"></span>
-              <span class="nav-toggle-bar"></span>
-              <span class="nav-toggle-bar"></span>
-            </button>
-          </div>
+        <nav class="site-nav" aria-label="Navigation principale">
+            <div class="navbar-inner">
+                <div class="nav-header">
+                    <a class="brand" href="../index.html" aria-label="Accueil Yearbook">
+                        <img src="../assets/logoMDS.png" alt="Logo MyDigitalSchool" class="logo">
+                        <span>MDS YEARBOOK</span>
+                    </a>
+                    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">
+                        <span class="nav-toggle-bar"></span>
+                        <span class="nav-toggle-bar"></span>
+                        <span class="nav-toggle-bar"></span>
+                    </button>
+                </div>
 
-          <div class="nav-collapsible">
-            <ul class="nav-links">
-              <li><a href="../index.html">Accueil</a></li>
-              <li class="nav-dropdown">
-                <button class="nav-dropdown-toggle" type="button">
-                  Filières
-                </button>
-                <ul class="nav-dropdown-menu">
-                  <li><a class="active" href="../pages/sio.html">BTS SIO</a></li>
-                  <li><a href="../pages/ciel.html">BTS CIEL</a></li>
-                </ul>
-              </li>
-            </ul>
-            <a class="nav-login-btn" href="../pages/login.html">Connexion</a>
-            <a class="nav-login-btn primary" href="../pages/register.html"
-              >Inscription</a
-            >
-          </div>
-        </div>
-      </nav>
+                <div class="nav-collapsible">
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li class="nav-dropdown">
+                            <button class="nav-dropdown-toggle" type="button">Les filieres</button>
+                            <ul class="nav-dropdown-menu">
+                                <li><a class="active" href="sio.html">BTS SIO</a></li>
+                                <li><a href="ciel.html">BTS CIEL</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a class="nav-login-btn" href="login.html">Connexion</a>
+                    <a class="nav-login-btn primary" href="register.html">Inscription</a>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
-      <section>
+      <section class="filiere-intro">
         <h1>BTS SIO</h1>
         <p>
           Spécialité : Solutions Informatiques aux Organisations
@@ -272,10 +263,13 @@
       </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 YearBook. Tous droits réservés.</p>
+      <footer class="home-footer">
+        <div class="footer-columns">
+            <a href="contact.html">Contact</a>
+            <a href="mentions-legales.html">Mentions legales</a>
         </div>
+        <p>&copy; 2026 MDS Yearbook</p>
     </footer>
+  <script src="../js/script.js"></script>
   </body>
 </html>
