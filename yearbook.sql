@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `etudient`
+-- Structure de la table `etudiant`
 --
 
-CREATE TABLE `etudient` (
+CREATE TABLE `etudiant` (
   `id` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
@@ -37,10 +37,10 @@ CREATE TABLE `etudient` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Déchargement des données de la table `etudient`
+-- Déchargement des données de la table `etudiant`
 --
 
-INSERT INTO `etudient` (`id`, `nom`, `prenom`, `photo`, `filliere_id`, `mail`) VALUES
+INSERT INTO `etudiant` (`id`, `nom`, `prenom`, `photo`, `filliere_id`, `mail`) VALUES
 (1, 'Martin', 'Lucas', 'https://placehold.co/600x400?text=Lucas+Martin', 1, 'LucasMartin@gmail.com'),
 (2, 'Bernard', 'Emma', 'https://placehold.co/600x400?text=Emma+Bernard', 1, 'EmmaBernard@gmail.com'),
 (3, 'Thomas', 'Louis', 'https://placehold.co/600x400?text=Louis+Thomas', 1, 'LouisThomas@gmail.com'),
@@ -113,11 +113,11 @@ INSERT INTO `filliere` (`id`, `titre`, `annee`, `description`) VALUES
 --
 
 --
--- Index pour la table `etudient`
+-- Index pour la table `etudiant`
 --
-ALTER TABLE `etudient`
+ALTER TABLE `etudiant`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fillier_id` (`filliere_id`);
+  ADD KEY `filliere_id` (`filliere_id`);
 
 --
 -- Index pour la table `filliere`
@@ -130,9 +130,9 @@ ALTER TABLE `filliere`
 --
 
 --
--- AUTO_INCREMENT pour la table `etudient`
+-- AUTO_INCREMENT pour la table `etudiant`
 --
-ALTER TABLE `etudient`
+ALTER TABLE `etudiant`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
@@ -146,10 +146,10 @@ ALTER TABLE `filliere`
 --
 
 --
--- Contraintes pour la table `etudient`
+-- Contraintes pour la table `etudiant`
 --
-ALTER TABLE `etudient`
-  ADD CONSTRAINT `fillier` FOREIGN KEY (`filliere_id`) REFERENCES `filliere` (`id`);
+ALTER TABLE `etudiant`
+  ADD CONSTRAINT `filliere` FOREIGN KEY (`filliere_id`) REFERENCES `filliere` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
