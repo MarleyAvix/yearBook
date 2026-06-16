@@ -19,16 +19,16 @@
     <main class="home-main">
         <section class="hero">
             <h1>Bienvenue sur notre Yearbook</h1>
-            <p class="hero-description">Retrouvez les filieres, les projets et la vie de campus de MyDigitalSchool Angers en un coup d'oeil.</p>
+            <p class="hero-description">Retrouvez les filières, les projets et la vie de campus de MyDigitalSchool Angers en un coup d'oeil.</p>
             <div class="hero-actions">
-                <a class="hero-button primary" href="#filiere-section">Explorer les filieres</a>
+                <a class="hero-button primary" href="#filiere-section">Explorer les filières</a>
             </div>
         </section>
         <section id="filiere-section" class="home-section">
             <article class="school-card">
                 <h2>MyDigitalSchool Angers</h2>
-                <h3>Presentation de l'ecole</h3>
-                <p>Situee dans un ecrin de verdure au coeur du Maine-et-Loire, MyDigitalSchool Angers vous forme aux metiers du digital et de l'informatique. L'ecole propose notamment les parcours BTS SIO et BTS CIEL, accessibles en alternance comme en formation initiale.</p>
+                <h3>Présentation de l'école</h3>
+                <p>Située dans un écrin de verdure au coeur du Maine-et-Loire, MyDigitalSchool Angers vous forme aux métiers du digital et de l'informatique. L'école propose notamment les parcours BTS SIO et BTS CIEL, accessibles en alternance comme en formation initiale.</p>
             </article>
 
             <div class="filiere-grid" aria-label="Liste des filieres">
@@ -38,7 +38,7 @@
                 </a>
                 <a class="filiere-card" href="../template/ciel.php">
                     <h4>BTS CIEL</h4>
-                    <p>Cybersecurite, Informatique et Reseaux</p>
+                    <p>Cybersécurite, Informatique et Réseaux</p>
                 </a>
             </div>
         </section>

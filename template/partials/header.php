@@ -17,7 +17,7 @@
                     <ul class="nav-links">
                         <li><a class="active" href="../public/index.php">Accueil</a></li>
                         <li class="nav-dropdown">
-                            <button class="nav-dropdown-toggle" type="button">Les filieres</button>
+                            <button class="nav-dropdown-toggle" type="button">Les filières</button>
                             <ul class="nav-dropdown-menu">
                                 <li><a href="../template/sio.php">BTS SIO</a></li>
                                 <li><a href="../template/ciel.php">BTS CIEL</a></li>

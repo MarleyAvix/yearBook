@@ -28,7 +28,7 @@
 
             <article class="legal-mentions">
                 <h2>Politique de confidentialité</h2>
-                <p>Nous collectons aucune données personnelles sur ce site. Toutes les informations sont utilisées uniquement à des fins de démonstration et ne sont pas stockées.</p>
+                <p>Nous ne collectons aucune données personnelles sur ce site. Toutes les informations sont utilisées uniquement à des fins de démonstration et ne sont pas stockées.</p>
             </article>
 
             <article class="legal-mentions">
