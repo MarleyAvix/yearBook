@@ -799,6 +799,9 @@ body.page-home {
 @media (min-width: 861px) {
     .container {
         grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        max-width: 1100px;
+        margin-top: 20px;
     }
 }
 
