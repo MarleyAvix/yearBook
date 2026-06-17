@@ -785,9 +785,10 @@ body.page-home {
     grid-template-columns: 1fr;
     gap: 12px;
     background-color: #f0f0f0;
-    width: 100%;
     max-width: 1100px;
     padding: 12px;
+    width: 100%;
+    max-width: 100%;
 }
 
 @media (min-width: 540px) {
@@ -799,6 +800,10 @@ body.page-home {
 @media (min-width: 861px) {
     .container {
         grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        max-width: 1100px;
+        margin-top: 20px;
+        max-width: 100%;
     }
 }
 
