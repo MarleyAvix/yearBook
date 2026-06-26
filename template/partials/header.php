@@ -24,8 +24,8 @@
                             </ul>
                         </li>
                     </ul>
-                    <a class="nav-login-btn" href="../template/login.php">Connexion</a>
-                    <a class="nav-login-btn primary" href="../template/register.php">Inscription</a>
+                    <a class="nav-login-btn" href="../public/login.php">Connexion</a>
+                    <a class="nav-login-btn primary" href="../public/register.php">Inscription</a>
                 </div>
             </div>
         </nav>
