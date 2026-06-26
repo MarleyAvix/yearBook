@@ -1,20 +1,11 @@
 ﻿<?php
 require_once '../template/bdd.php';
 
-/* Récupérer le nombre d'étudiant dans la bdd pour les BTS CIEL */
+/* Récupérer le nombre d'étudiant dans la bdd pour les BTS SIO */
 
 $getStudent = $conn->prepare("SELECT * FROM etudiant LEFT JOIN filliere ON etudiant.filliere_id = filliere.id WHERE filliere.titre = 'CIEL' ");
 $getStudent ->execute();
 $students = $getStudent->fetchAll();
-
-/* Récupérer les filieres pour le menu de navigation */
-$getFilliere = $conn->prepare("SELECT * FROM filliere");
-$getFilliere->execute();
-$fillieres = $getFilliere->fetchAll(); 
-
-/*recuperer lindex de la filere dans l'uri*/
-
-
 ?>
 
 <!doctype html>
@@ -24,7 +15,7 @@ $fillieres = $getFilliere->fetchAll();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BTS CIEL</title>
 
-    <link rel="stylesheet" href="../public/css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,12 +29,12 @@ $fillieres = $getFilliere->fetchAll();
 
     <main>
       <section>
-        <h1> <?php echo $fillieres[$indexFilliere]['titre']; ?></h1>
+        <h1>BTS CIEL</h1>
         <p>
           Promotion : 2025 - 2027 | Spécialité : Cybersécurité, Informatique et réseaux Electroniques
         </p>
         <p>
-          Le BTS CIEL propose deux options et forme à l'étude, à la conception, à l'exploitation et à la maintenance de réseaux informatiques ainsi qu'à la valorisation de la donnée et à la sécurité informatique. Découvrez les profils des
+          Le BTS CIEL propose deux options et forme à l'étude, à la conception, à l'exploitation et à la maintenance de réseaux informatiques ainsi qu'à la valorisation de la donnée et à la sécurité informatique.Découvrez les profils des
           étudiants de la promotion 2025-2027.
         </p>
       </section>
@@ -60,7 +51,6 @@ $fillieres = $getFilliere->fetchAll();
             <div class="student-photo">
               <img src="<?php echo $student['photo']; ?>" alt="Photo de <?php echo $student['nom'] . ' ' . $student['prenom']; ?>">
             </div>
-
             <div class="content-card">
               <div class="student-name"><?php echo $student['prenom'] . ' ' . $student['nom']; ?></div>
               <div>
@@ -77,6 +67,5 @@ $fillieres = $getFilliere->fetchAll();
     </main>
 
     <?php require_once '../template/partials/footer.php'; ?>
-    <script src="../public/js/script.js"></script>
   </body>
 </html>
