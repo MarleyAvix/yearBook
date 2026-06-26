@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : ven. 26 juin 2026 à 12:02
+-- Généré le : ven. 26 juin 2026 à 12:07
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -105,8 +105,8 @@ CREATE TABLE `filliere` (
 --
 
 INSERT INTO `filliere` (`id`, `titre`, `annee`, `description`) VALUES
-(1, 'SIO', '2025', 'Le BTS SIO forme aux métiers de la cybersécurité, du développement\n          d\'applications et de la gestion des réseaux. Découvrez les profils des\n          étudiants de la promotion 2025-2027.'),
-(2, 'CIEL', '2025', 'Le BTS CIEL propose deux options et forme à l\'étude, à la conception, à l\'exploitation et à la maintenance de réseaux informatiques ainsi qu\'à la valorisation de la donnée et à la sécurité informatique.Découvrez les profils des\n          étudiants de la promotion 2025-2027.');
+(1, 'SIO', '2025', 'Le BTS SIO forme aux métiers de la cybersécurité, du développement d\'applications et de la gestion des réseaux. Découvrez les profils des étudiants de la promotion 2025-2027.'),
+(2, 'CIEL', '2025', 'Le BTS CIEL propose deux options et forme à l\'étude, à la conception, à l\'exploitation et à la maintenance de réseaux informatiques ainsi qu\'à la valorisation de la donnée et à la sécurité informatique.Découvrez les profils des étudiants de la promotion 2025-2027.');
 
 --
 -- Index pour les tables déchargées
