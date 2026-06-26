@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,38 +14,7 @@
 </head>
 
 <body>
-    <header>
-        <nav class="site-nav" aria-label="Navigation principale">
-            <div class="navbar-inner">
-                <div class="nav-header">
-                    <a class="brand" href="../index.html" aria-label="Accueil Yearbook">
-                        <img src="../assets/logoMDS.png" alt="Logo MyDigitalSchool" class="logo">
-                        <span>MDS YEARBOOK</span>
-                    </a>
-                    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">
-                        <span class="nav-toggle-bar"></span>
-                        <span class="nav-toggle-bar"></span>
-                        <span class="nav-toggle-bar"></span>
-                    </button>
-                </div>
-
-                <div class="nav-collapsible">
-                    <ul class="nav-links">
-                        <li><a href="../index.html">Accueil</a></li>
-                        <li class="nav-dropdown">
-                            <button class="nav-dropdown-toggle" type="button">Les filieres</button>
-                            <ul class="nav-dropdown-menu">
-                                <li><a href="sio.html">BTS SIO</a></li>
-                                <li><a href="ciel.html">BTS CIEL</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <a class="nav-login-btn" href="login.html">Connexion</a>
-                    <a class="nav-login-btn primary" href="register.html">Inscription</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <?php require_once '../template/partials/header.php'; ?>
 
     <main class="legal-main">
         <section>
@@ -74,15 +43,9 @@
         </section>
     </main>
 
-    <footer class="home-footer">
-        <div class="footer-columns">
-            <a href="contact.html">Contact</a>
-            <a href="mentions-legales.html">Mentions légales</a>
-        </div>
-        <p>&copy; 2026 MDS Yearbook</p>
-    </footer>
+    <?php require_once '../template/partials/footer.php'; ?>
 
-    <script src="../js/script.js"></script>
+    <script src="../public/js/script.js"></script>
 </body>
 
 </html>
