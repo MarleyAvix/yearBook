@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le : lun. 08 juin 2026 à 14:07
--- Version du serveur : 10.4.32-MariaDB
--- Version de PHP : 8.2.12
+-- Hôte : localhost
+-- Généré le : ven. 26 juin 2026 à 12:02
+-- Version du serveur : 10.4.28-MariaDB
+-- Version de PHP : 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -97,7 +97,7 @@ CREATE TABLE `filliere` (
   `id` int(11) NOT NULL,
   `titre` varchar(255) NOT NULL,
   `annee` year(4) NOT NULL,
-  `description` varchar(255) NOT NULL
+  `description` varchar(1024) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -105,8 +105,8 @@ CREATE TABLE `filliere` (
 --
 
 INSERT INTO `filliere` (`id`, `titre`, `annee`, `description`) VALUES
-(1, 'SIO', '2025', 'BTS SIO 2025'),
-(2, 'CIEL', '2025', 'BTS CIEL 2025');
+(1, 'SIO', '2025', 'Le BTS SIO forme aux métiers de la cybersécurité, du développement\n          d\'applications et de la gestion des réseaux. Découvrez les profils des\n          étudiants de la promotion 2025-2027.'),
+(2, 'CIEL', '2025', 'Le BTS CIEL propose deux options et forme à l\'étude, à la conception, à l\'exploitation et à la maintenance de réseaux informatiques ainsi qu\'à la valorisation de la donnée et à la sécurité informatique.Découvrez les profils des\n          étudiants de la promotion 2025-2027.');
 
 --
 -- Index pour les tables déchargées
